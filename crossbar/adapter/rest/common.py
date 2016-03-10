@@ -113,7 +113,9 @@ class _CommonResource(Resource):
         if "log_category" not in kwargs.keys():
             kwargs["log_category"] = "AR" + str(code)
 
-        self.log.failure(None, log_failure=kwargs["log_failure"])
+        # self.log.failure(None, log_failure=kwargs["log_failure"])
+        print("QuickFix: request failure!")
+
         self.log.debug("[request failure] - {code} / " + reason,
                        code=code, **kwargs)
 
